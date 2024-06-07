@@ -11,6 +11,7 @@ Este proyecto es una aplicación web desarrollada con Angular y con backend desa
 - [x] Listado de Pedidos.
 - [x] Edición de Pedidos.
 - [x] Agregar Pedidos.
+- [x] Entrega de pedidos. 
 - [x] Integración con servicios RESTful.
 
 ## Tecnologías Utilizadas
