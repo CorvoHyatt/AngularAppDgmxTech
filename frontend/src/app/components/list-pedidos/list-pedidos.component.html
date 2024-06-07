@@ -4,7 +4,7 @@
 
 		<h4>Listado de Pedidos</h4>
 		<button type="button" class="btn btn-primary" routerLink="/add">Agregar
-			producto</button>
+			Pedido</button>
 	</div>
 	<table *ngIf="listPedidos.length > 0" class="table table-hover">
 		<thead>
@@ -28,5 +28,5 @@
 			</tr>
 		</tbody>
 	</table>
-	<h5 *ngIf="listPedidos.length == 0">No hay productos para mostrar</h5>
+	<h5 *ngIf="listPedidos.length == 0">No hay pedidos para mostrar</h5>
 </div>

@@ -46,7 +46,7 @@ export class AddEditPedidoComponent implements OnInit {
     })
   }
 
-  addProduct() {
+  addPedido() {
     const pedido: Pedido = {
       titulo: this.form.value.titulo,
       descripcion: this.form.value.descripcion,
@@ -57,15 +57,15 @@ export class AddEditPedidoComponent implements OnInit {
       // Editar
       this._pedidoService.updatePedido(pedido, this.id).subscribe(() => {
         this.loading = false
-        this.toastr.info(`El pedido ${pedido.titulo} fue Editado con exito`, 'pedido Editado')
+        this.toastr.info(`El pedido ${pedido.titulo} fue Editado con exito`, 'Pedido Editado')
         this.router.navigate(['/'])
       })
     } else {
       //Agregar
-      this._pedidoService.postProduct(product).subscribe(() => {
+      this._pedidoService.postPedido(pedido).subscribe(() => {
 
         this.loading = false
-        this.toastr.success(`El producto ${product.name} fue registrado con exito`, 'Producto registrado')
+        this.toastr.success(`El Pedido ${pedido.titulo} fue registrado con exito`, 'Pedido registrado')
         this.router.navigate(['/'])
       })
     }

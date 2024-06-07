@@ -2,37 +2,24 @@
 <div *ngIf="!loading" class="row mt-5">
 	<div class="col-lg-4 offset-lg-4">
 		<div class="card text-white bg-secondary mb-3" style="max-width: 25rem;">
-			<div class="card-header text-center">{{operacion}}Producto</div>
+			<div class="card-header text-center">{{operacion}}Pedido</div>
 
 			<div class="card-body">
-				<form [formGroup]="form" (ngSubmit)="addProduct()">
+				<form [formGroup]="form" (ngSubmit)="addPedido()">
 
-					<input formControlName="name" class="form-control"
-						placeholder="Ingrese Nombre">
+					<input formControlName="titulo" class="form-control"
+						placeholder="Ingrese el Titulo">
 					<span
-						*ngIf="form.get('name')?.hasError('required') && form.get('name')?.touched">El
+						*ngIf="form.get('titulo')?.hasError('required') && form.get('titulo')?.touched">El
 						campo Nombre es
 						<strong>requerido</strong></span>
 
-					<input formControlName="description" type="text" class="form-control mt-2"
+					<textarea formControlName="descripcion" type="text"
+						class="form-control mt-2 col-12"
+						style="height: 180px;"
 						placeholder="Ingrese Descripcion">
-					<span
-						*ngIf="form.get('name')?.hasError('required') && form.get('description')?.touched">El
-						campo Description
-						es
-						<strong>requerido</strong></span>
-					<input formControlName="price" type="number" class="form-control mt-2"
-						placeholder="Ingrese Precio">
-					<span
-						*ngIf="form.get('name')?.hasError('required') && form.get('price')?.touched">El
-						campo Precio es
-						<strong>requerido</strong></span>
-					<input formControlName="stock" type="number" class="form-control mt-2"
-						placeholder="Ingrese Stock">
-					<span
-						*ngIf="form.get('name')?.hasError('required') && form.get('stock')?.touched">El
-						campo Stock es
-						<strong>requerido</strong></span>
+						</textarea>
+
 					<div class="row mt-2 text-center">
 						<div class="col-lg-6">
 
